@@ -6,8 +6,12 @@ import app from '../lib/app.js';
 const request = supertest(app);
 
 describe('demo routes', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     return setup(pool);
+  });
+
+  afterAll(() => {
+    return pool.end();
   });
 
   it('is a dummy test', () => {
