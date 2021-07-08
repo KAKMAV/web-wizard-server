@@ -9,12 +9,25 @@
 
 ## 0. *Main Objective: 
     - TDD (test driven development)
+
     - why? we want a strong/hearty backend
+
     - create a failing test first for each CRUD route
-    - write adjust code to get tests passing
+
+    - work vertically, meaning:
+        (example)
+            - create failing test first for .POST in test file
+            - create route in controller file (users.js)
+            - create method in model file (User.js)
+            - create/define route in app.js
+            - drop/define tables in setup.sql
+
+    - write/refine/adjust code to get tests passing
         - debug through expected common errors:
             - 400 error message (controller route issue)
             - 500 error message (SQL model issue)
+
+*** get it working first, refactor, then clean up ***
 
 ## 1. create a controller(s):
     - create users.js folder
