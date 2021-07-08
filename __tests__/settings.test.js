@@ -106,5 +106,23 @@ describe('setting routes', () => {
       .send(setting);
     expect(res.body).toEqual(setting);
   });
+
+  it('deletes the users setting, via .DELETE', async () => {
+    const setting = await Setting.insert({
+      userId: 'cloud',
+      pageUrl: 'cloud.com',
+      backgroundColor: 'pink',
+      elementColor: 'blue',
+      fontFamily: 'bubbly',
+      fontSize: '100',
+      elementSize: '80'
+    });
+
+    const res = await request(app).delete(`/api/v1/settings/${setting.id}`);
+    // we left out the .send
+
+    expect(res.body).toEqual(setting);
     
+  });
+
 });
