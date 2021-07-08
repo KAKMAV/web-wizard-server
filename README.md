@@ -1,7 +1,7 @@
 # DATA MODELING ARCHITECH:
 
 # Google Chrome extention - MANIFEST V3
-![manifest v3](common/manifest.gif)
+
 
 
 
