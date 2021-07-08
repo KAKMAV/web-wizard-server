@@ -1,5 +1,7 @@
 # DATA MODELING ARCHITECH:
 
+# Google Chrome extention - MANIFEST V3
+
 ### CRUD ROUTE:
 - .POST: signup/creates a user in database
 - .GET: (findByAll) find all user accounts
