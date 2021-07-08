@@ -88,4 +88,23 @@ describe('setting routes', () => {
 
     expect(res.body).toEqual(setting);
   });
+
+  it('update a setting via .PUT', async () => {
+    const setting = await Setting.insert({
+      userId: 'kalan',
+      pageUrl: 'kalan.com',
+      backgroundColor: 'red',
+      elementColor: 'pink',
+      fontFamily: 'cursive',
+      fontSize: '12',
+      elementSize: '30'
+    });
+
+    setting.elementColor = 'teal';
+
+    const res = await request(app).put(`/api/v1/settings/${setting.id}`)
+      .send(setting);
+    expect(res.body).toEqual(setting);
+  });
+    
 });
