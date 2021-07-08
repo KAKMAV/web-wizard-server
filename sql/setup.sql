@@ -9,13 +9,13 @@ CREATE TABLE users (
 
 CREATE TABLE settings (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  userId TEXT NOT NULL,
-  pageUrl TEXT NOT NULL,
-  backgroundColor TEXT NOT NULL,
-  elementColor TEXT NOT NULL,
-  fontFamily TEXT NOT NULL,
-  fontSize TEXT NOT NULL,
-  elementSize TEXT NOT NULL
+  user_Id TEXT NOT NULL,
+  page_url TEXT NOT NULL,
+  background_color TEXT NOT NULL,
+  element_color TEXT NOT NULL,
+  font_family TEXT NOT NULL,
+  font_size TEXT NOT NULL,
+  element_size TEXT NOT NULL
 );
 
 

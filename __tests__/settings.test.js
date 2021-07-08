@@ -5,6 +5,8 @@ import app from '../lib/app.js';
 
 const agent = request.agent(app);
 
+//   we will want all CRUD routes in the settings model
+
 describe('Routes to adjust user settings in chrome extention', () => {
   beforeEach(() => {
     return setup(pool);
@@ -34,6 +36,7 @@ describe('Routes to adjust user settings in chrome extention', () => {
       elementSize: '7'
     });
   });
-  //   we will want all CRUD routes in the settings model
+
+
 
 });
