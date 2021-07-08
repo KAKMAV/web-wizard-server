@@ -29,4 +29,28 @@ describe('demo routes', () => {
 
     });
   });
+
+  it('finds all users (findAll), via .GET', async () => {
+    const kirby = await User.insert({
+      username: 'kirby',
+      email: 'kirby@email.com',
+      password: 'password'
+    });
+    const wilma = await User.insert({
+      username: 'wilma',
+      email: 'wilma@email.com',
+      password: 'password'
+    });
+    const scooby = await User.insert({
+      username: 'scooby',
+      email: 'scooby@email.com',
+      password: 'password'
+    });
+    
+    const res = await request(app)
+      .get('/api/v1/users');
+
+    expect(res.body).toEqual([kirby, wilma, scooby]);
+  });
 });
+
