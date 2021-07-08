@@ -1,11 +1,11 @@
 # DATA MODELING ARCHITECH:
 
 ### CRUD ROUTE:
-.POST: signup/creates a user in database
-.GET: (findByAll) find all user accounts
-.GET: (findById) find a specific user
-.PUT: updates/modifies user changes
-.DELETE: delete/remove user changes
+- .POST: signup/creates a user in database
+- .GET: (findByAll) find all user accounts
+- .GET: (findById) find a specific user
+- .PUT: updates/modifies user changes
+- .DELETE: delete/remove user changes
 
 ## 0. *Main Objective: 
     - TDD (test driven development)
