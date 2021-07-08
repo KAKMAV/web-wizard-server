@@ -2,31 +2,31 @@ import pool from '../lib/utils/pool.js';
 import setup from '../data/setup.js';
 import request from 'supertest';
 import app from '../lib/app.js';
-import User from '../lib/models/User';
+import User from '../lib/models/User.js';
 
-// const agent = request.agent(app);
+const agent = request.agent(app);
 
 describe('demo routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
 
-
-  it('signs up/creates user via .POST', async () => {
+  it('signs up a user via POST', async () => {
     const res = await request(app)
       .post('/api/v1/users/signup')
       .send({
-        username: 'test',
-        email: 'test@test.com',
+        // id: '1',
+        username: 'Angel',
+        email: 'angel@test.com',
         password: 'password'
       });
 
     expect(res.body).toEqual({
       id: '1',
-      username: 'test',
-      email: 'test@test.com',
+      username: 'Angel',
+      email: 'angel@test.com',
       password: 'password'
-    });
 
+    });
   });
 });
