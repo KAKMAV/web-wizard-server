@@ -7,7 +7,7 @@
 
 ### CRUD ROUTE:
 - .POST: signup/creates a user in database
-- .GET: (findByAll) find all user accounts
+- .GET: (findAll) find all user accounts
 - .GET: (findById) find a specific user
 - .PUT: updates/modifies user changes
 - .DELETE: delete/remove user changes

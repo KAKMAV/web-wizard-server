@@ -1,7 +1,21 @@
-DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS users, settings CASCADE;
+
 CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   username TEXT NOT NULL,
   email TEXT NOT NULL,
   password TEXT NOT NULL
 );
+
+CREATE TABLE settings (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  userId TEXT NOT NULL,
+  pageUrl TEXT NOT NULL,
+  backgroundColor TEXT NOT NULL,
+  elementColor TEXT NOT NULL,
+  fontFamily TEXT NOT NULL,
+  fontSize TEXT NOT NULL,
+  elementSize TEXT NOT NULL
+);
+
+
