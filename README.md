@@ -32,11 +32,13 @@
 ## 1. create a controller(s):
     - create users.js folder
     - all controllers live here
+    - aka .post route
 
 ## 2. create a model(s):
     - create User.js folder
     - all models live here
     - talks to app.js 
+    - aka SQL queries
 
 ## 3. define/drop a table(s) in SQL database:
     - create/define tables for each model
