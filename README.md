@@ -1,6 +1,9 @@
 # DATA MODELING ARCHITECH:
 
 # Google Chrome extention - MANIFEST V3
+![manifest v3](common/manifest.gif)
+
+
 
 ### CRUD ROUTE:
 - .POST: signup/creates a user in database
