@@ -71,4 +71,21 @@ describe('setting routes', () => {
 
     expect(res.body).toEqual([calvin, scarlet, matt]);
   });
+
+  it('fid a setting via Get id', async () => {
+    const setting = await Setting.insert({
+      userId: 'kalan',
+      pageUrl: 'kalan.com',
+      backgroundColor: 'red',
+      elementColor: 'pink',
+      fontFamily: 'cursive',
+      fontSize: '12',
+      elementSize: '30'
+    });
+
+    const res = await request(app)
+      .get('/api/v1/settings/${setting.id}');
+
+    expect(res.body).toEqual(setting);
+  });
 });
