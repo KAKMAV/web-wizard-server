@@ -84,7 +84,7 @@ describe('setting routes', () => {
     });
 
     const res = await request(app)
-      .get('/api/v1/settings/${setting.id}');
+      .get(`/api/v1/settings/${setting.id}`);
 
     expect(res.body).toEqual(setting);
   });
