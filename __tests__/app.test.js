@@ -4,7 +4,7 @@ import request from 'supertest';
 import app from '../lib/app.js';
 import User from '../lib/models/User.js';
 
-const agent = request.agent(app);
+// const agent = request.agent(app);
 
 describe('demo routes', () => {
   beforeEach(() => {
@@ -30,8 +30,9 @@ describe('demo routes', () => {
     });
   });
 
-  it('finds all users (findAll), via .GET', async () => {
-    const kirby = await User.insert({
+  it('finds users via Get', async () => {
+   
+    const spot = await User.insert({
       username: 'kirby',
       email: 'kirby@email.com',
       password: 'password'
@@ -46,11 +47,11 @@ describe('demo routes', () => {
       email: 'scooby@email.com',
       password: 'password'
     });
-    
+
     const res = await request(app)
       .get('/api/v1/users');
 
-    expect(res.body).toEqual([kirby, wilma, scooby]);
+    expect(res.body).toEqual([spot, wilma, scooby]);
   });
 });
 
