@@ -30,15 +30,15 @@
 *** First, make it **WORK** . Then make it **CLEAN**. Last, make it **FAST** ***
 
 ## 1. create a controller(s):
-    - create users.js folder
+    - create users.js folder and define the route
     - all controllers live here
-    - aka .post route
+    - this talks to the model (the function we use)
 
 ## 2. create a model(s):
-    - create User.js folder
-    - all models live here
-    - talks to app.js 
-    - aka SQL queries
+    - create User.js folder, and create/define method function used in controller
+    - all models live here, receiving communication from controller
+    - this then talks to app.js 
+    - SQL queries live here
 
 ## 3. define/drop a table(s) in SQL database:
     - create/define tables for each model
