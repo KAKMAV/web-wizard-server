@@ -1,11 +1,11 @@
 import pool from '../lib/utils/pool.js';
 import setup from '../data/setup.js';
+
 import request from 'supertest';
 import app from '../lib/app.js';
 import User from '../lib/models/User.js';
 
 // const agent = request.agent(app);
-
 describe('demo routes', () => {
   beforeEach(() => {
     return setup(pool);
@@ -54,6 +54,7 @@ describe('demo routes', () => {
     expect(res.body).toEqual([spot, wilma, scooby]);
   });
 });
+
 
 
 
