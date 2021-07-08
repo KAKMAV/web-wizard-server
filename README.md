@@ -27,7 +27,7 @@
             - 400 error message (controller route issue)
             - 500 error message (SQL model issue)
 
-*** First, make it WORK. Thenm make it CLEAN. Finally, make it FAST ***
+*** First, make it **WORK** . Then make it **CLEAN**. Finally, make it **FAST** ***
 
 ## 1. create a controller(s):
     - create users.js folder
